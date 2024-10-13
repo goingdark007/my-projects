@@ -2,7 +2,64 @@
 
 import random
 
-print(f'{'Rock':<{10}} {'Paper':<{10}} {'Scissor':<{12}} {'Game':<{12}}')
+hand1 = {
+    "rock": '''
+        ___
+    ---'   ____)
+          (______)
+          (_____)
+          (____)
+    ---._(____)
+    ''',
+
+    "paper": '''
+        ___
+    ---'   _)_____
+              _____)
+              _____)
+             _____)
+    ---.____)
+    ''',
+
+    "scissor": '''
+        ___
+    ---'   __)
+            ______)
+           ______)
+          (__)
+    ---._(__)
+    '''
+}
+hand2 = {
+    "rock": '''
+         ___
+    (___   '---
+    (____)
+    (____)
+     (___)
+      (___)__.---
+    ''',
+
+    "paper": '''
+         ___
+    (_____ '---
+    (_____     
+     (_____     
+      (_____    
+       (_____.---
+    ''',
+
+    "scissor": '''
+         ___
+    (_____'---
+    (_____      
+        (__   
+          (__)  
+           (_)__.---
+    '''
+}
+
+print(f"{'Rock':<{10}} {'Paper':<{10}} {'Scissor':<{12}} {'Game':<{12}}")
 
 print('-'*40)
 
@@ -26,7 +83,7 @@ while n<m:
     if b in list:
 
         if b in a:
-            print(f'You drawed its {a}')
+            print(f'\n{hand1[a]} {hand2[b]}\nYou drawed its {a}')
 
         else:
 
@@ -42,11 +99,11 @@ while n<m:
                 p = True
 
             if p:
-                print(f'\nYou lost its {a}')
+                print(f'\n{hand1[a]} {hand2[b]}\nYou lost its {a} ')
                 computer += 1
 
             else:
-                print(f'\nYou won its {a}')
+                print(f'\n{hand1[a]} {hand2[b]}\nYou won its {a} ')
                 player += 1
     else:
         print('\nInvalid input. Please enter rock paper or scissor')
@@ -55,21 +112,21 @@ while n<m:
     n += 1    
 
 if n == 10:
+
     if computer > player:
         print(f'\nThe computer won the match by {computer} points.')
-    
     elif computer == player:
         print('\nThe match is draw')
-    
     else:
-        print(f'\n Congratulations you won by {player} points')
+        print(f'\nCongratulations you won by {player} points')
 
-print(f'\n{'MATCH OVERVIEW':>{21}}')
 
-print(f'\n{'Player\'s':<{15}} {'Point\'s':<{15}}')
+print(f"\n{'MATCH OVERVIEW':>{21}}")
+
+print(f"\n{'Player\'s':<{15}} {'Point\'s':<{15}}")
 
 print('-' * 30)
 
-print(f'{'Computer':<{15}}  {computer:<{15}}')
+print(f"{'Computer':<{15}}  {computer:<{15}}")
 
 print(f'\n{'YOU':<{15}}  {player:<{15}}')
