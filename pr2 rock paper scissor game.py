@@ -123,10 +123,10 @@ if n == 10:
 
 print(f"\n{'MATCH OVERVIEW':>{21}}")
 
-print(f"\n{'Player\'s':<{15}} {'Point\'s':<{15}}")
+print(f"\n{'Players':<{15}} {'Points':<{15}}")
 
 print('-' * 30)
 
 print(f"{'Computer':<{15}}  {computer:<{15}}")
 
-print(f'\n{'YOU':<{15}}  {player:<{15}}')
+print(f"\n{'YOU':<{15}}  {player:<{15}}")
