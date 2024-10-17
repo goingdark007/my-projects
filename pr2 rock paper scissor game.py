@@ -5,11 +5,11 @@ import random
 hand1 = {
     "rock": '''
         ___
-    ---'   ____)
-          (______)
+    ---'   ___)
           (_____)
           (____)
-    ---._(____)
+          (___)
+    ---._(___)
     ''',
 
     "paper": '''
@@ -76,6 +76,7 @@ computer = 0
 player = 0
 
 while n<m:
+    
     b = input('\nEnter :').lower()
     
     a = random.choice(list)
@@ -83,7 +84,7 @@ while n<m:
     if b in list:
 
         if b in a:
-            print(f'\n{hand1[a]} {hand2[b]}\nYou drawed its {a}')
+            print(f'\nComputer :-{hand1[a]} \nUser :-{hand2[b]}\nYou drawed its {a}')
 
         else:
 
@@ -99,27 +100,24 @@ while n<m:
                 p = True
 
             if p:
-                print(f'\n{hand1[a]} {hand2[b]}\nYou lost its {a} ')
+                print(f'\nComputer :-{hand1[a]} \nUser :-{hand2[b]}\nYou lost its {a} ')
                 computer += 1
 
             else:
-                print(f'\n{hand1[a]} {hand2[b]}\nYou won its {a} ')
+                print(f'\nComputer :-{hand1[a]} \nUser :-{hand2[b]}\nYou won its {a} ')
                 player += 1
     else:
         print('\nInvalid input. Please enter rock paper or scissor')
         m += 1
-
     n += 1    
-
+    
 if n == 10:
-
     if computer > player:
         print(f'\nThe computer won the match by {computer} points.')
     elif computer == player:
         print('\nThe match is draw')
     else:
         print(f'\nCongratulations you won by {player} points')
-
 
 print(f"\n{'MATCH OVERVIEW':>{21}}")
 
